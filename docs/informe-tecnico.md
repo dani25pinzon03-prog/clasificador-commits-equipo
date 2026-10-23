@@ -1,4 +1,4 @@
-# Informe Técnico - Caracterización del Modelo Local
+Latencia medida: $9.97\text{ s}$ ($9978\text{ ms}$)# Informe Técnico - Caracterización del Modelo Local
 
 ## Ficha de Caracterización (Perfil A - qwen2.5-coder:1.5b)
 
