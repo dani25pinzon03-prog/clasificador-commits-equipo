@@ -6,8 +6,8 @@ Repositorio oficial para el desarrollo del proyecto de integración de modelos d
 - **Programa:** Análisis y Desarrollo de Software (ADSO - Ficha 3492142)
 - **Aprendiz:** Daniel Stiven Pinzón Martínez
 - **Aprendiz:** Juan Esteban Moncada Gomez
-- - **Aprendiz:** David Jose Gonzalez Noguera
-- - **Aprendiz:** Joel Santiago Herrera Vergara
+- **Aprendiz:** David Jose Gonzalez Noguera
+- **Aprendiz:** Joel Santiago Herrera Vergara
 - **Institución:** SENA Regional Tolima
 
 ---
