@@ -13,6 +13,7 @@
 
 
 ( MONCADA )
+ Ficha de Caracterizació.
 Perfil de hardware: Perfil A (32 GB RAM, 1 TB SSD)   
 PNG
 
