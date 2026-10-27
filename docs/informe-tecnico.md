@@ -12,22 +12,12 @@
 - **Calidad percibida (1 a 5):** 5 - Excelente tiempo de respuesta y fluidez con la GPU local.
 
 
-( MONCADA )
- Ficha de Caracterizació.
-Perfil de hardware: Perfil A (32 GB RAM, 1 TB SSD)   
-PNG
-
-RAM total del equipo: 32 GB   
-PNG
-
-Modelo y etiqueta: qwen2.5-coder:1.5b   
-PNG
-
-Tamaño en disco: ~1 GB   
-PNG
-
-Latencia de 5 ejecuciones (ms): (Ingresa el valor de tus pruebas en ms)
-
-Latencia promedio: (Ingresa el promedio registrado)
-
-RAM usada durante la inferencia: Verificada con free -h
+# ( MONCADA )
+# Ficha de Caracterizació.
+## Perfil de hardware: Perfil A (32 GB RAM, 1 TB SSD)   
+- **RAM total del equipo: 32 GB   
+- **Modelo y etiqueta: qwen2.5-coder:1.5b   
+- **Tamaño en disco: ~1 GB   
+- **Latencia de 5 ejecuciones (ms): (Ingresa el valor de tus pruebas en ms)
+- **Latencia promedio: (Ingresa el promedio registrado)
+- **RAM usada durante la inferencia: Verificada con free -h
