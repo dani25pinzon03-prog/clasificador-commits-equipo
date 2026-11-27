@@ -1,6 +1,5 @@
 import os
 
-
 import requests
 
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://host.docker.internal:11434")
