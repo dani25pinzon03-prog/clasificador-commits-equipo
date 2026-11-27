@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: postgres_db_commits
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: tu_password_segura
+      POSTGRES_DB: clasificador_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+  api:
+    build: .
+    container_name: fastapi_commits_app
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:tu_password_segura@db:5432/clasificador_db
+    depends_on:
+      - db
+    restart: always
+
+volumes:
+  postgres_data:
