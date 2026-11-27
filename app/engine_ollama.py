@@ -25,4 +25,4 @@ def clasificar_con_ollama(mensaje: str) -> dict:
         else:
             return {"error": "Error al conectar con el servidor de Ollama"}
     except requests.exceptions.RequestException as e:
-        return {"error": f"Ollama no está disponible: {str(e)}"}
+        return {"error": f"Ollama no está disponible: {e!s}"}

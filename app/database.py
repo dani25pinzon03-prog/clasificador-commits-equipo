@@ -1,4 +1,5 @@
 import os
+
 import psycopg2
 from dotenv import load_dotenv
 
@@ -20,7 +21,7 @@ def conectar_db():
             port=DB_PORT
         )
         return conexion
-    except Exception as e:
+    except psycopg2.Error as e:
         print(f"Error al conectar a la base de datos: {e}")
         return None
 
@@ -42,8 +43,29 @@ def guardar_historial(mensaje: str, motor: str, clasificacion: str):
         cursor.close()
         conexion.close()
         return True
-    except Exception as e:
+    except psycopg2.Error as e:
         print(f"Error al guardar en la base de datos: {e}")
         if conexion:
             conexion.close()
         return False
+def obtener_historial(limite: int = 20):
+    conexion = conectar_db()
+    if not conexion:
+        return []
+
+    try:
+        cursor = conexion.cursor()
+        cursor.execute(
+            "SELECT * FROM historial_commits ORDER BY id DESC LIMIT %s;",
+            (limite,),
+        )
+        filas = cursor.fetchall()
+        columnas = [desc[0] for desc in cursor.description]
+        cursor.close()
+        conexion.close()
+        return [dict(zip(columnas, fila)) for fila in filas]
+    except psycopg2.Error as e:
+        print(f"Error al consultar el historial: {e}")
+        if conexion:
+            conexion.close()
+        return []
